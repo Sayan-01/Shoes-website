@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
 import Menu from "./Menu";
@@ -10,16 +10,34 @@ import { BsCart3 } from "react-icons/bs";
 import { BiMenuAltRight } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 
-
-
 const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [showCatagoryMenu, setShowCatagoryMenu] = useState(false);
   const [show, setShow] = useState("translate-y-0");
+  const [lastScrollY, setLastScrollY] = useState(0);
 
+  const controlNavbar = () => {
+    if (window.scrollY > 200) {
+      if (window.scrollY > lastScrollY) {
+        setShow("-translate-y-[80px]");
+      } else {
+        setShow("shadow-sm");
+      }
+    } else {
+      setShow("translate-y-0");
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]); //ata likhechi
 
   return (
-    <header className={`w-full h-[50px] md:h-[80px] flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show} `}>
+    <header className={`w-full h-[50px] md:h-[80px] flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 bg-white ${show} `}>
       <Wrapper className={"flex justify-between items-center"}>
         {/* nike logo */}
         <Link href={"/"}>
@@ -58,7 +76,7 @@ const Header = () => {
 
           {/* mobile icon */}
 
-          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative -mr-2 ">
+          <div className=" md:hidden w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative -mr-2 ">
             {mobileMenu ? (
               <VscChromeClose
                 className="text-[18px] "
