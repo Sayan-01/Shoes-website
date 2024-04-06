@@ -26,7 +26,7 @@ const MenuMobile = ({ showCatagoryMenu, setShowCatagoryMenu, setMobileMenu }) =>
             {item?.subMenu ? (
               <li
                 className=" cursor-pointer py-4 px-5 flex border-b flex-col relative "
-                onClick={() => setShowCatagoryMenu(!showCatagoryMenu)}
+                onClick={(e) => setShowCatagoryMenu(!showCatagoryMenu)}
               >
                 <div className="flex justify-between items-center">
                   {item.name}
@@ -39,7 +39,7 @@ const MenuMobile = ({ showCatagoryMenu, setShowCatagoryMenu, setMobileMenu }) =>
                         <Link
                           href={"/"}
                           key={sub.id}
-                          onClick={() => {
+                          onClick={(e) => {
                             setShowCatagoryMenu(false);
                             setMobileMenu(false);
                           }} //ai onclick ta lagano holo jate subcatagorite click korle showCatagory menu ta close hoy jay

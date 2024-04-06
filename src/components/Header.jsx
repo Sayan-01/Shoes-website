@@ -67,12 +67,14 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative ">
-            <BsCart3 className=" text-[15px] md:text-[20px] " />
-            <div className=" h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full  bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px] ">
-              6
+          <Link href={"http://localhost:3000/cart"}>
+            <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex items-center justify-center hover:bg-black/[0.05] cursor-pointer relative ">
+              <BsCart3 className=" text-[15px] md:text-[20px] " />
+              <div className=" h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full  bg-red-600 absolute top-1 left-5 md:left-7 text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px] ">
+                6
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* mobile icon */}
 

@@ -1,5 +1,5 @@
-"use client";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -18,6 +18,7 @@ const subMenuData = [
 ];
 
 const Menu = ({ showCatagoryMenu, setShowCatagoryMenu }) => {
+  const router = useRouter;
   return (
     <ul className=" hidden md:flex items-center gap-8 font-medium text-black">
       {data.map((item) => {
@@ -36,7 +37,7 @@ const Menu = ({ showCatagoryMenu, setShowCatagoryMenu }) => {
                     {subMenuData.map((sub) => {
                       return (
                         <Link
-                          href={"/"}
+                          href={`/catagory/${sub.name}`}
                           key={sub.id}
                           onClick={() => setShowCatagoryMenu(false)} //ai onclick ta lagano holo jate subcatagorite click korle showCatagory menu ta close hoy jay
                         >
