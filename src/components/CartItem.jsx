@@ -8,6 +8,7 @@ const CartItem = () => {
       {/* IMAGE START */}
       <div className="shrink-0 aspect-square w-[50px] md:w-[120px]">
         <Image
+        alt=" "
           src="/product-1.webp"
           width={120}
           height={120}

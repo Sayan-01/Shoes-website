@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const HeroBanner = () => {
@@ -13,15 +14,21 @@ const HeroBanner = () => {
         <CarouselContent>
           <CarouselItem>
             <div className=" md:mx-10">
-              <img
-                className="w-full md:aspect-auto object-fit "
+              <Image
+                width={5000}
+                height={5000}
+                alt=" "
+                className=" w-full md:aspect-auto object-fit "
                 src="/slide-1.png"
               />
             </div>
           </CarouselItem>
           <CarouselItem>
             <div className=" md:mx-10">
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=" "
                 className=" w-full md:aspect-auto object-fit "
                 src="/slide-2.png"
               />
@@ -29,7 +36,10 @@ const HeroBanner = () => {
           </CarouselItem>
           <CarouselItem>
             <div className=" md:mx-10">
-              <img
+              <Image
+                width={5000}
+                height={5000}
+                alt=" "
                 className="w-full md:aspect-auto object-fit "
                 src="/slide-3.png"
               />

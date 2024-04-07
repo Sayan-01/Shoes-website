@@ -45,7 +45,14 @@ const Cart = () => {
               {/* BUTTON START */}
               <button className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center">
                 Checkout
-                {<img src="/spinner.svg" />}
+                {
+                  <Image
+                    width={15}
+                    height={15}
+                    alt=" "
+                    src="/spinner.svg"
+                  />
+                }
               </button>
               {/* BUTTON END */}
             </div>
@@ -55,6 +62,7 @@ const Cart = () => {
         </>
         <div className="flex-[2] flex flex-col items-center pb-[50px] md:-mt-14">
           <Image
+            alt=" "
             src="/empty-cart.jpg"
             width={300}
             height={300}

@@ -7,7 +7,7 @@ const ProductCard = () => {
       href={"/product/1"}
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer"
     >
-      <Image
+      <Image alt=" "
         width={500}
         height={500}
         src={"/product-1.webp"}

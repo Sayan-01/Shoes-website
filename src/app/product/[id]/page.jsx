@@ -20,7 +20,7 @@ const Product = () => {
             <div className="text-[34px] font-semibold mb-2 leading-tight">Jordan</div>
 
             {/* PRODUCT SUBTITLE */}
-            <div className="text-lg font-semibold mb-5">Men's golf shoes</div>
+            <div className="text-lg font-semibold mb-5">Men&apos;s golf shoes</div>
             {/* PRODUCT PRICE */}
             <div className="flex items-center">
               <p className="mr-2 text-lg font-semibold">MRP : &#8377;11999</p>

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -18,7 +19,6 @@ const subMenuData = [
 ];
 
 const Menu = ({ showCatagoryMenu, setShowCatagoryMenu }) => {
-  const router = useRouter;
   return (
     <ul className=" hidden md:flex items-center gap-8 font-medium text-black">
       {data.map((item) => {
