@@ -74,7 +74,7 @@ const Footer = () => {
           <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">Terms of Use</div>
           <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">Privacy Policy</div>
         </div>
-        {/* RIGHT END */}
+        {/* RIGHT END... */}
       </Wrapper>
     </footer>
   );
